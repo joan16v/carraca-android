@@ -95,16 +95,16 @@ public class CarracaActivity extends Activity implements SensorEventListener {
                 if (movement > min_movement) {
                     if (current_time - last_movement >= limit) {      
                     	
-                        Toast.makeText(getApplicationContext(), "Hay movimiento de " + movement, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getApplicationContext(), "Hay movimiento de " + movement, Toast.LENGTH_SHORT).show();
                     	
-                    	/*MediaPlayer mp = MediaPlayer.create(getBaseContext(),
+                    	MediaPlayer mp = MediaPlayer.create(getBaseContext(),
                                 R.raw.carraca);
                         mp.start();
                         mp.setOnCompletionListener(new OnCompletionListener() {            
                             public void onCompletion(MediaPlayer mp) {
                                 mp.release();
                             }
-                        });  */                  	
+                        });
                     	
                     }
                     last_movement = current_time;
