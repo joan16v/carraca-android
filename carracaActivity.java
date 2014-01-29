@@ -17,7 +17,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class CarracaActivity extends Activity implements SensorEventListener {
-    /** Called when the activity is first created. */
 	
     private long last_update = 0, last_movement = 0;
     private float prevX = 0, prevY = 0, prevZ = 0;
@@ -32,7 +31,6 @@ public class CarracaActivity extends Activity implements SensorEventListener {
         
         //carraca = (ImageView) findViewById(R.id.imageView1);
         //carraca.setBackgroundResource(R.drawable.carraca);
-        
         //Remove title bar
         //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
@@ -40,7 +38,7 @@ public class CarracaActivity extends Activity implements SensorEventListener {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         
         /*MediaPlayer mp = MediaPlayer.create(getBaseContext(),
-                R.raw.carraca);
+        R.raw.carraca);
         mp.start();
         mp.setOnCompletionListener(new OnCompletionListener() {            
             public void onCompletion(MediaPlayer mp) {
@@ -96,7 +94,6 @@ public class CarracaActivity extends Activity implements SensorEventListener {
                     if (current_time - last_movement >= limit) {      
                     	
                         //Toast.makeText(getApplicationContext(), "Hay movimiento de " + movement, Toast.LENGTH_SHORT).show();
-                    	
                     	MediaPlayer mp = MediaPlayer.create(getBaseContext(),
                                 R.raw.carraca);
                         mp.start();
